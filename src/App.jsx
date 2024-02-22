@@ -3,6 +3,8 @@ import './App.css'
 import { useGlitch } from 'react-powerglitch'
 import Carousel from './components/Carousel/Carousel'
 import Stepper from './components/Stepper/Stepper'
+import House from './components/House/House'
+import Gallery from './components/Gallery/Gallery'
 
 const App = () => {
   const [isInDeny, setisInDeny] = useState(true)
@@ -36,6 +38,8 @@ const App = () => {
         :
         <Stepper step={step} />
       }
+      <House />
+      <Gallery />
     </>
   )
 }
