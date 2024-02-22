@@ -27,19 +27,20 @@ const App = () => {
       <button type="button"
         onClick={toggleDeny}
         className="
-      bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 m-4 drop-shadow-md 
+      hue-rotate-180 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 m-4 drop-shadow-md 
       hover:drop-shadow-xl px-4 py-2 font-semibold text-sm bg-white text-slate-700 
       border border-slate-300 rounded-md shadow-sm ring-2 ring-offset-slate-50 ring-pink-500 ring-offset-2 
       dark:bg-slate-700 dark:text-slate-200 dark:border-transparent dark:ring-offset-slate-900">
         {isInDeny ? "Assume" : "Deny"}
       </button>
+
+      <House />
+      <Gallery />
       {isInDeny ?
         null
         :
         <Stepper step={step} />
       }
-      <House />
-      <Gallery />
     </>
   )
 }
