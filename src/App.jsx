@@ -56,7 +56,9 @@ const App = () => {
         :
         <Stepper step={step} />
       }
-      {experiences.map(xp => <div>{xp.company}</div>)}
+      <div className={`border-2 w-40 rounded-lg border-slate-50 font-bold`}>
+        {experiences.map(xp => <div key={xp.id}>{xp.company}</div>)}
+      </div>
     </>
   )
 }

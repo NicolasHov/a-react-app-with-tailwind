@@ -8,6 +8,13 @@ const BIN_ID = import.meta.env.VITE_BIN_ID;
 const url = `https://api.jsonbin.io/v3/b/${BIN_ID}/latest`
 
 const getData = async () => {
+
+    console.log("MODE: ", import.meta.env.MODE);
+    console.log("BASE_URL: ", import.meta.env.BASE_URL);
+    console.log("In prod ?: ", import.meta.env.PROD);
+    console.log("In dev ?: ", import.meta.env.DEV);
+    console.log("In SSR ?: ", import.meta.env.SSR);
+
     return fetch(url, {
         mode: 'cors',
         headers: {
