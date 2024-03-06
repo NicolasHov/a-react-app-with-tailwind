@@ -1,11 +1,12 @@
 
 const KEY = import.meta.env.VITE_KEY;
 const BIN_ID = import.meta.env.VITE_BIN_ID;
+const API_URL = import.meta.env.VITE_API_URL;
 
 /* 
 * Reads the JSON file inside the bins
 */
-const url = `https://api.jsonbin.io/v3/b/${BIN_ID}/latest`
+const url = `${API_URL}/${BIN_ID}/latest`
 
 const getData = async () => {
 
