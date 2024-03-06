@@ -7,5 +7,5 @@ export default defineConfig({
   plugins: [
     react()
   ],
-  base: "https://nicolashov.github.io/a-react-app-with-tailwind",
+  base: "https://nicolashov.github.io/tailwind-app",
 })
