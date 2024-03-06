@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import { useGlitch } from 'react-powerglitch'
 import Carousel from './components/Carousel/Carousel'
@@ -56,7 +56,7 @@ const App = () => {
         :
         <Stepper step={step} />
       }
-      {experiences.map(xp => <div>xp.name</div>)}
+      {experiences.map(xp => <div>{xp.company}</div>)}
     </>
   )
 }
