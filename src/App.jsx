@@ -5,12 +5,14 @@ import Carousel from './components/Carousel/Carousel'
 import Stepper from './components/Stepper/Stepper'
 import House from './components/House/House'
 import Gallery from './components/Gallery/Gallery'
+import { getData } from "../src/getResume.js";
 
 const App = () => {
   const [isInDeny, setisInDeny] = useState(true)
   const [step, setStep] = useState(0)
   const [hueLevel, setHueLevel] = useState(0)
   const glitch = useGlitch();
+  const [experiences, setExperience] = useState([])
 
   const toggleDeny = () => {
     setisInDeny(isInDeny ? false : true)
@@ -18,6 +20,19 @@ const App = () => {
     setStep(step == 0 ? 1 : 0)
 
   }
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = await getData();
+        setExperience(res.record.experiences)
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchData();
+  }, [])
+
   return (
     <>
       <h1 className={`border-2 w-40 rounded-lg border-slate-50 ${isInDeny ? 'underline' : 'line-through'} text-3xl font-bold`}>
@@ -41,6 +56,7 @@ const App = () => {
         :
         <Stepper step={step} />
       }
+      {experiences.map(xp => <div>xp.name</div>)}
     </>
   )
 }
