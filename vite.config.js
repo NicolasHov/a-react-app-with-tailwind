@@ -6,5 +6,6 @@ export default defineConfig({
   base: '/tailwind-app',
   plugins: [
     react()
-  ]
+  ],
+  base: "https://nicolashov.github.io/a-react-app-with-tailwind",
 })
