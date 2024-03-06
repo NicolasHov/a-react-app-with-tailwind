@@ -29,5 +29,9 @@ export default defineConfig(({ command, mode }) => {
       'process.env.VITE_BIN_ID': JSON.stringify(process.env.VITE_BIN_ID),
       'process.env.VITE_API_URL': JSON.stringify(process.env.VITE_API_URL)
     },
+    base: '/tailwind-app',
+    plugins: [
+      react()
+    ],
   }
 })
