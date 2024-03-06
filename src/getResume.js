@@ -9,13 +9,6 @@ const API_URL = import.meta.env.VITE_API_URL;
 const url = `${API_URL}/${BIN_ID}/latest`
 
 const getData = async () => {
-
-    console.log("MODE: ", import.meta.env.MODE);
-    console.log("BASE_URL: ", import.meta.env.BASE_URL);
-    console.log("In prod ?: ", import.meta.env.PROD);
-    console.log("In dev ?: ", import.meta.env.DEV);
-    console.log("In SSR ?: ", import.meta.env.SSR);
-
     return fetch(url, {
         mode: 'cors',
         headers: {
