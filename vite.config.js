@@ -11,7 +11,7 @@ export default defineConfig({
   ],
   define: {
     'process.env.VITE_KEY': JSON.stringify(process.env.VITE_KEY),
-    'process.env.VITE_BIN_ID': JSON.stringify(process.env.VITE_BIN_ID),
-    'process.env.VITE_API_URL': JSON.stringify(process.env.VITE_API_URL),
+    // 'process.env.VITE_BIN_ID': JSON.stringify(process.env.VITE_BIN_ID),
+    // 'process.env.VITE_API_URL': JSON.stringify(process.env.VITE_API_URL),
   }
 })
