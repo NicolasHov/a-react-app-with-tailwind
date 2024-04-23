@@ -1,7 +1,11 @@
-
-const KEY = import.meta.env.VITE_KEY;
-const BIN_ID = import.meta.env.VITE_BIN_ID;
-const API_URL = import.meta.env.VITE_API_URL;
+import dotenv from 'dotenv'
+// dotenv / config.js
+// const KEY = import.meta.env.VITE_KEY;
+const KEY = process.env.VITE_KEY;
+// const BIN_ID = import.meta.env.VITE_BIN_ID;
+const BIN_ID = process.env.VITE_BIN_ID;
+// const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = process.env.VITE_API_URL;
 
 /* 
 * Reads the JSON file inside the bins
